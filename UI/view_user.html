@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Quick loan</title>
+<link rel="stylesheet" type="text/css" href="css/poli.css">
+<script src="js/javascriptfunction.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="main" id="main">
+<div class="content" >
+<!-- menu -->
+<div class="topnav" id="myTopnav">
+  <div class="menu" id="main">
+  <i><h2><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>Open menu</h2></i>
+  </a>
+<div class="menu-right">
+  <i><input type="button" value="logout" class="button" onclick="window.location.href='index.html'"/>
+</div>
+  </div>
+</nav>
+    <section>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="circle1">
+  <h2>Profile</h2>
+  <h6>Name:kanamugire aristide</h6>
+<img src="images/arist.jpg"  class="circle">
+</div>
+  <a href="admin_panel.html">admin home</a>
+   <a href="view_application.html">loan applications</a>
+    <a href="view_notrepaid.html">not fully repaid loans</a>
+    <a href="view_repaidloan.html">repaid loans</a>
+    <a href="view_user.html">view users</a>
+    <a href="resetpassword.html">Reset password</a>
+    <a href="index.html">Logout</a>
+</div>
+
+<div id="main">
+  <br>
+  <br>
+  <div class="page-title">
+  <h2>All users</h2>
+<input type="text" id="myInput" onkeyup="searchuser()" placeholder="Search for a user.." title="Type in a name">
+<table id="myTable">
+  <tr class="header">
+    <th style="width:10%;">N</th>
+    <th style="width:40%;">Name of user</th>
+    <th style="width:10%;">image</th>
+    <th style="width:20%;">contact</th>
+    <th style="width:10%;">verify user</th>
+    <th style="width:10%;">Delete</th>
+  </tr>
+  <tr>
+    <td><h4>1</h4></td>
+    <td><h4>eric rutanga</h4></td>
+    <td><img src="images/arist.jpg"width="80" height="80" border="1"></td>
+    <td>0784536727</td>
+    <td><button class="button1" id="myverify">verify</button></td>
+    <td><button class="button2">Delete</button></td>
+  </tr>
+  <tr>
+    <td><h4>1</h4></td>
+    <td><h4>alex kinsek</h4></td>
+    <td><img src="images/arist.jpg" width="80" height="80" border="1"></td>
+    <td>0784536727</td>
+    <td><button class="button1" id="myverify">verify</button></td>
+    <td><button class="button2">Delete</button></td>
+  </tr>
+  <tr>
+    <td><h4>3</h4></td>
+    <td><h4>Peter paul</h4></td>
+    <td><img src="images/arist.jpg" width="80" height="80" border="1"></td>
+    <td>0784536727</td>
+    <td><button class="button1" id="myverify">verify</button></td>
+    <td><button class="button2">Delete</button></td>
+  </tr>
+  
+</table>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      </div>
+    <div class="modal-body">
+      <p><h6>Are you sure you want to verify this user?<h6></p>
+      <p><button type="submit"  class="button1">Yes</button> <button type="submit"  class="button3" class="close">NO</button></p>
+    </div>
+    <div class="modal-footer">
+      
+    </div>
+  </div>
+<script >
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myverify");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</div>
+</div>
+</div>
+</div>
+<br>
+</section>
+<footer>
+  <p>Design by izere roger sabin</p>
+</footer>
+</body>
+</html>
