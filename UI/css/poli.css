@@ -16,8 +16,27 @@ input[type=text5]:focus, input[type=password]:focus {
   outline: none;
   
 }
+
+.button5 {
+  background-color:blue;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+}
+
+.button5:hover {
+  opacity: 0.8;
+}
+
+.table-header{
+  text-align:center;
+}
+
 #myInput {
-  background-image: url(../images/searchicon.gif);
+  background-image: url('images/searchicon.gif');
   background-size:55px;
   background-position: 1px 2px;
   background-repeat: no-repeat;
@@ -65,33 +84,26 @@ text-align: center;
 }
 
 .login{
+  background-image: url("../images/login.jpg");
 
-  background-image: url(../images/login.jpg); 
-  /*background-image: url('../img/bg.png');*/
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-bottom:12%;
 
 }
-
-.signup{
-
-  background-image: url(../images/Sign-Background.jpg); 
+.login-container {
+  padding-top:25px;
+  padding: 20px;
+  width: 70%;
+  text-align: center;
+  display: inline-block;
 }
 
-/* Set a style for all buttons */
-.button5 {
-  background-color:blue;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 10%;
-  opacity: 0.9;
-}
-
-.button5:hover {
-  opacity:1;
-}
 
 /* Extra styles for the cancel button */
 .cancelbtn5 {
@@ -125,9 +137,10 @@ text-align: center;
   padding-top: 50px;
 }
 
+
 /* Modal Content/Box */
 .modal-content5 {
-  background-color: #fefefe;
+  background-color:#2C1AA1;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
@@ -196,7 +209,30 @@ input[type=submit]:hover {
 }
 
 
-.container {
+.container1 {
+  background-image: url("../images/loanimages1.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 64px;
+}
+.container2 {
+background-image: url("../images/images.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   padding: 64px;
 }
 
@@ -251,6 +287,7 @@ footer {
   text-align: center;
   color: white;
   bottom: 0;
+  font-size:20px;
 }
 img {
   display: block;
@@ -353,12 +390,15 @@ color: black;}
   color: white;
 
 }
+
 .circle {
   height: 90px;
   width: 140px;
   border-radius: 100%;
 
 }
+
+
 .button1 {
   background-color:blue; 
   border: 1;
@@ -385,7 +425,6 @@ color: black;}
   background-color:green;
   color: white;
 }
-
 .button2 {
   background-color:orange; 
   border: 1;
@@ -446,7 +485,6 @@ color: black;}
   background-color:red;
   color: white;
 }
-
 input[type=text] {
     width: 100%;
     padding: 12px 28px;
@@ -536,7 +574,7 @@ body {
   color:#5093cd; 
   margin: 0; 
   padding: 0 0 6px 15px; 
-  background: url(../images/tooplate_list.png) no-repeat scroll 0 5px;
+  background: url(images/tooplate_list.png) no-repeat scroll 0 5px;
 
 }
 
@@ -656,10 +694,10 @@ form {border: 3px solid #f1f1f1;
 }
 
 input[type=text2], input[type=password] {
-  width: 100%;
+  width: 60%;
   padding: 15px 30px;
-  padding-left: 25px
-  padding-top:25px;
+  padding-left: 25px;
+  padding-top:15px;
   margin: 8px 0;
   float: center;
   display: inline-block;
@@ -667,19 +705,6 @@ input[type=text2], input[type=password] {
   box-sizing: border-box;
 }
 
-.button5 {
-  background-color:blue;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 80%;
-}
-
-.button5:hover {
-  opacity: 0.8;
-}
 
 .cancelbtn {
   width: auto;
@@ -771,13 +796,6 @@ img.avatar {
 
 .container {
   padding: 16px;
-}
-.login-container {
-  padding-top:25px;
-  padding: 20px;
-  width: 50%;
-  text-align: center;
-  display: inline-block;
 }
 
 span.psw {

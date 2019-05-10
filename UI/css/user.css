@@ -1,34 +1,60 @@
 * {
   box-sizing:border-box;
 }
-input[type=text5], input[type=password] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
+.topnav {
+  overflow: hidden;
+  background-color:blue;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 20px;
+  padding-top: 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.topnav i {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.topnav-right {
+  float: right;
+}
+.button {
+  background-color:white; 
+  border: 1;
+  color: black;
+  padding: 12px 18px;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-/* Add a background color when the inputs get focus */
-input[type=text5]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-  
-}
-
-.login{
-
-  background-image: url(images/Login-Background.jpg); 
-  padding-bottom:12%;
+  font-size: 18px;
+  margin: 3px 3px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 6px;
 
 }
 
-.signup{
-
-  background-image: url(images/Sign-Background.jpg); 
+.button:first-child {
+    margin-left: 0;
 }
 
+.button:last-child {
+    margin-right: 0;
+}
+
+.button:hover {
+  background-color: skyblue;
+  color: white;
+}
 /* Set a style for all buttons */
 .button5 {
   background-color:blue;
@@ -194,9 +220,14 @@ footer {
   background-color:blue;
   padding: 10px;
   text-align: center;
+  display: block;
   color: white;
+  font-size: 20px;
   bottom: 0;
+  width:100%;  
+
 }
+
 img {
   display: block;
   height: auto;
@@ -223,17 +254,63 @@ img {
 * {
   box-sizing: border-box;
 }
-
+@media
+only screen and (max-width: 1000px) {
+  table, thead, tbody, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { border: 1px solid #ccc; }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 200px;
+    margin-left: 150px;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 100px;
+    font-size: 20px;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin-left: -150px;
+    background-color:blue; 
+    color:white;
+    border: 2px solid #ddd;
+    font-weight:bold;
+  }
+  td:nth-of-type(1):before { content: "Date"; }
+  td:nth-of-type(2):before { content: "User"; }
+  td:nth-of-type(3):before { content: "Status"; }
+  td:nth-of-type(4):before { content: "Repaid";}
+  td:nth-of-type(5):before { content: "Tenor"; }
+  td:nth-of-type(6):before { content: "Amount"; }
+  td:nth-of-type(7):before { content: "Payment"; }
+  td:nth-of-type(8):before { content: "Interest";}
+  td:nth-of-type(9):before { content: "Balance";}
+}
+.table-header{
+  text-align: center;
+}
 #myInput {
   background-image: url(../images/searchicon.gif);
   background-size:55px;
   background-position: 1px 2px;
   background-repeat: no-repeat;
   width: 100%;
-  font-size: 16px;
+  font-size: 20px;
+  color:black;
   padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
+  border: 2px solid #323030;
   margin-bottom: 12px;
+  color:black;
 }
 
 #myTable {
@@ -250,13 +327,13 @@ img {
   background-color:blue; 
   color:white;
   border: 2px solid #ddd;
-
+   width: 40%;
 }
 #myTable td{
   text-align: left;
   padding: 8px;
-  border:2px
-  ;
+  border:2px solid #ddd;
+  
 }
 
 #myTable tr {
@@ -403,66 +480,8 @@ color: black;}
   background-color:red;
   color: white;
 }
-input[type=text] {
-    width: 100%;
-    padding: 12px 28px;
-     margin: 3px 3px;
-    box-sizing: border-box;
-    border: 4px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-    font-size: 18px;
-}
 
 
-.button {
-  background-color:white; 
-  border: 1;
-  color: black;
-  padding: 12px 18px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 18px;
-  margin: 3px 3px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 6px;
-
-}
-
-.button:first-child {
-    margin-left: 0;
-}
-
-.button:last-child {
-    margin-right: 0;
-}
-
-.button:hover {
-  background-color: skyblue;
-  color: white;
-}
-
-
-
-input[type=text] {
-    width: 100%;
-    padding: 12px 28px;
-     margin: 3px 3px;
-    box-sizing: border-box;
-    border: 4px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-    font-size: 18px;
-}
-
-input[type=text]:focus {
-    border: 3px solid #655;
-}
 
 
 body {
@@ -501,7 +520,7 @@ body {
 }
 
 .main {
-  margin-left: 285px; /* Same as the width of the sidenav */
+  margin-left:285px; /* Same as 285px;the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
@@ -516,7 +535,7 @@ body {
   background-color: blue;
   position: fixed;
   top: 0;
-  width:99%;
+  width:82%;
  
 }
 
@@ -540,7 +559,7 @@ body {
   height: 80%;
 
 }
-  .menu.responsive a {
+  .menu.responsive i {
     float: none;
     display: block;
     text-align: left;
@@ -560,20 +579,6 @@ input[type=text2], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-}
-
-.button5 {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 10%;
-}
-
-.button5:hover {
-  opacity: 0.8;
 }
 
 .cancelbtn {
@@ -622,15 +627,15 @@ span.psw {
 .menu-right {
   float: right;
 }
-.menu-right a {
+.menu-right i {
   background-color:blue;
   padding-top:10px;
   overflow:block;
   
 }
 @media screen and (max-width: 600px, max-width:360px) {
-  .menu-right a:not(:first-child) {display: none;}
-  .menu-right a.icon {
+  .menu-right i:not(:first-child) {display: none;}
+  .menu-right i.icon {
     float: left;
     display: block;
   }
@@ -642,9 +647,9 @@ span.psw {
 
 @media screen and (max-width: 600px, max-width:360px) {
   .menu-right{}
-  .menu a:not(:first-child) {display: none;}
-  .menu a.icon {
-    float: right;
+  .menu i:not(:first-child) {display: none;}
+  .menu i.icon {
+    float: left;
     display: block;
   }
 }
