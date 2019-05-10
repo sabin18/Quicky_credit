@@ -254,6 +254,7 @@ img {
 * {
   box-sizing: border-box;
 }
+/*add table responsive design*/
 @media
 only screen and (max-width: 1000px) {
   table, thead, tbody, td, tr {

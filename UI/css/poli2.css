@@ -433,10 +433,6 @@ input[type=text] {
   color: white;
 }
 
-
-
-
-
 input[type=text] {
     width: 100%;
     padding: 12px 28px;
@@ -452,7 +448,6 @@ input[type=text] {
 input[type=text]:focus {
     border: 3px solid #655;
 }
-
 
 body {
   font-family: "Lato", sans-serif;
