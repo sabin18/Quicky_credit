@@ -5,7 +5,7 @@ import Schema from '../helpers/inputvalidation';
 import model from '../models/loans';
 
 class loansController {
-// get function
+// get loans function
   static getloans(req, res) {
     return res.status(200).json({
       status: 200,
@@ -48,7 +48,7 @@ class loansController {
     });
   }
 
-  // create function
+  // create loan function
   static createloans(req, res) {
     const id = parseInt(loans.length) + 1;
     const {
@@ -114,7 +114,7 @@ class loansController {
   }
 
 
-  // get loan by id
+  // get loan by id function
   static getOneloan(req, res) {
     const { id } = req.params;
     const findloan = model.findOne(id);
