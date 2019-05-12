@@ -48,7 +48,7 @@ class loansController {
     });
   }
 
-  // create loan function
+  // create  loans function
   static createloans(req, res) {
     const id = parseInt(loans.length) + 1;
     const {
@@ -84,7 +84,7 @@ class loansController {
     }
   }
 
-  // update function (patch)
+  // update loans function (patch)
   static verifyloan(req, res) {
     const { id } = req.params;
     const { status } = req.body;
@@ -114,7 +114,7 @@ class loansController {
   }
 
 
-  // get loan by id function
+  // get loan by id
   static getOneloan(req, res) {
     const { id } = req.params;
     const findloan = model.findOne(id);
