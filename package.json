@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon transpiled/index.js",
-    "test": "nyc --reporter=html --reporter=text mocha ./test/*.js --compilers js:babel-core/register --timeout 1000 --exit",
+    "start": "nodemon transpiled server/index.js",
+    "test": "nyc --reporter=html --reporter=text mocha server/test/*.js --compilers js:babel-core/register --timeout 1000 --exit",
     "coveralls": "nyc report --reporter=text-lcov| coveralls",
     "compile": "babel ./server -d ./compiled",
-    "lint": "./node_modules/.bin/eslint --fix ./**/*.js"
+    "lint": "./node_modules/.bin/eslint --fix server/**/*.js"
   },
   "engines": {
     "node": "11.7.0"
