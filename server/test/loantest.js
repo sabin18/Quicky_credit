@@ -1,6 +1,5 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
-import jwt from 'jwt-simple';
 import app from '../src/server';
 import authentication from '../helpers/authentication';
 
@@ -162,6 +161,7 @@ describe('loans routes test', () => {
 
     };
 
+
     chai.request(app)
       .post('/api/v1/loans')
       .send(loans)
@@ -174,6 +174,7 @@ describe('loans routes test', () => {
         done();
       });
   });
+
 
    it('it should not be able to send a loan application without valid Token ', (done) => {
     const loans = {
@@ -221,6 +222,7 @@ describe('loans routes test', () => {
       interest: 275,
 
     };
+
 
     chai.request(app)
       .post('/api/v1/loans')
