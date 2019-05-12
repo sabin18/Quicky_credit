@@ -10,10 +10,6 @@ const userSchema = joi.object().keys({
     .required(),
   password: joi.string().regex(/^[a-zA-Z0-9]{3,30}$/).required(),
   email: joi.string().email().required(),
-  isadmin: joi.string().min(5).max(5).valid(['false', 'true'])
-    .required()
-    .trim(),
-
 });
 
 
