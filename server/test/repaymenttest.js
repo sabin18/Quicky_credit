@@ -89,6 +89,9 @@ describe('repayments routes test', () => {
       });
   });
 
+
+ 
+
   it('it should be able to record repayments history', (done) => {
     const repayments = {
       id: 1,
@@ -143,6 +146,8 @@ describe('repayments routes test', () => {
       balance: 5575,
 
     };
+
+
     chai.request(app)
       .post('/api/v1/loans/5666y/repayments')
       .send(repayments)
