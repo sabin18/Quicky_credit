@@ -4,7 +4,18 @@ import passwordHash from 'password-hash';
 // Define a class for creating a user
 class user {
   constructor() {
-    this.users = [];
+    this.users = [
+     {
+    id: 1,
+    email: 'mugabe@gmail.com',
+    firstname: 'kwizera',
+    lastname: 'kivin',
+    password: 'sha1$db1129e7$1$14d8764a1910de685c04cefc47bd265667780921',
+    address: 'kigali',
+    status: 'verified',
+    isadmin: 'true',
+     }
+    ];
   }
 
 
@@ -23,7 +34,7 @@ class user {
       password:this.setPassword(info.password),
       address : info.address,
       status: 'unverified',
-      isadmin: info.isadmin,
+      isadmin: 'false',
   
 
     };
