@@ -1,8 +1,4 @@
-[![Build Status](https://travis-ci.org/sabin18/Quicky_credit.svg?branch=develop)](https://travis-ci.org/sabin18/Quicky_credit)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/af40541d90819393286b/maintainability)](https://codeclimate.com/github/sabin18/Quicky_credit/maintainability)
-
-
+[![Build Status](https://travis-ci.org/sabin18/Quicky_credit.svg?branch=develop)](https://travis-ci.org/sabin18/Quicky_credit)   
 
 # Quicky_credit
 
