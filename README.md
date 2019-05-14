@@ -86,7 +86,7 @@ use this to login:
 -Email:mugabe@gmail.com
 -password:sha1$db1129e7$1$14d8764a1910de685c04cefc47bd265667780921
 ```
-## OHTHER TOOLS USED IN THIS PROJECT
+## OTHER TOOLS USED IN THIS PROJECT
 
 - Linter
  #### ESLint - Linter Tool
