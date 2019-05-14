@@ -67,7 +67,7 @@ To get the project up and running on your local machine, please follow these ins
 | HTTP MEHOD | ENDPOINTS                       | ACCESS                       | DESCRIPTION                           |
 |------------|---------------------------------|------------------------------|---------------------------------------|
 | POST       | /api/v1/auth/signup             | public                       | create an account                     |
-| POST       | /api/v1/auth/signup             | public                       | login to the app                      |
+| POST       | /api/v1/auth/signin             | public                       | login to the app                      |
 | POST       | /api/v1/loans/                  | private(user)                | apply for the loan                    |
 | GET        | /api/v1/loans/                  | private(admin only)          | get all loans                         |
 | GET        | /api/v1/loans/id                | private(admin only)          | get specific loan                     |
