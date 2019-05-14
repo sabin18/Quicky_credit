@@ -78,7 +78,14 @@ To get the project up and running on your local machine, please follow these ins
 | GET        | /api/v1/users                   | private(admin only)          | get all users                         |
 | GET        | /api/v1/users/id                | private(admin only)          | get a specific users                  |
 | PATCH      | /api/v1/users/email/verify      | private(admin only)          | verify a user (as verified)           |
+```
+Warning: where there is loanid and id it is a number example :1,2
+if you want to access the app as admin 
+use this to login:
 
+-Email:mugabe@gmail.com
+-password:sha1$db1129e7$1$14d8764a1910de685c04cefc47bd265667780921
+```
 ## OHTHER TOOLS USED IN THIS PROJECT
 
 - Linter
