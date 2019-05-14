@@ -64,6 +64,21 @@ To get the project up and running on your local machine, please follow these ins
  
 ## TABLE FOR END POINTS AND HOW YOU CAN TEST THEM
 
+| HTTP MEHOD | ENDPOINTS                       | ACCESS                       | DESCRIPTION                           |
+|------------|---------------------------------|------------------------------|---------------------------------------|
+| POST       | /api/v1/auth/signup             | public                       | create an account                     |
+| POST       | /api/v1/auth/signup             | public                       | login to the app                      |
+| POST       | /api/v1/loans/                  | private(user)                | apply for the loan                    |
+| GET        | /api/v1/loans/                  | private(admin only)          | get all loans                         |
+| GET        | /api/v1/loans/id                | private(admin only)          | get specific loan                     |
+| PATCH      | /api/v1/loans/id                | private(admin only)          | approve or reject loan                |
+| POST       | /api/v1/loans/loanid/repayments | private(admin only)          | post loan repayments                  |
+| GET        | /api/v1/repayments              | private(admin only)          | get all repayments history            |
+| GET        | /api/v1/loans/loanid/repayments | private(user and admin only) | get a specific loan repayment history |
+| GET        | /api/v1/users                   | private(admin only)          | get all users                         |
+| GET        | /api/v1/users/id                | private(admin only)          | get a specific users                  |
+| PATCH      | /api/v1/users/email/verify      | private(admin only)          | verify a user (as verified)           |
+
 ## OHTHER TOOLS USED IN THIS PROJECT
 
 - Linter
