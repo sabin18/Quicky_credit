@@ -8,7 +8,7 @@ import Schema from '../helpers/inputvalidation';
 class userController {
   static createUser(req, res) {
     const {
-      email, firstname, lastname, password, address, isadmin,
+      email, firstname, lastname, password, address,
     } = req.body;
     const { error, value } = joi.validate(
       {
@@ -17,7 +17,6 @@ class userController {
         lastname,
         password,
         address,
-        isadmin,
       },
       Schema.userSchema,
     );
@@ -34,7 +33,7 @@ class userController {
         address,
         userId: id,
         status: 'unverified',
-        isadmin,
+        isadmin:'false',
       }); 
       const checkemail= mymodel.userEmail(email); 
       if (checkemail) {
@@ -52,8 +51,6 @@ class userController {
           firstname,
           lastname,
           email,
-          isadmin,
-
         },
 
       });

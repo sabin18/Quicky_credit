@@ -89,6 +89,11 @@ describe('repayments routes test', () => {
       });
   });
 
+ bug-fix-home-page-165998180
+
+ 
+
+ gh-pages
   it('it should be able to record repayments history', (done) => {
     const repayments = {
       id: 1,
@@ -143,6 +148,10 @@ describe('repayments routes test', () => {
       balance: 5575,
 
     };
+ bug-fix-home-page-165998180
+
+
+ gh-pages
     chai.request(app)
       .post('/api/v1/loans/5666y/repayments')
       .send(repayments)

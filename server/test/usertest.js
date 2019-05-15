@@ -288,7 +288,12 @@ describe('user routes test', () => {
 
       it('it should be able to verify a user with status {verified}', (done) => {
         const users = {
+ bug-fix-home-page-165998180
+
           status: 'ok',
+
+
+ gh-pages
         };
         chai.request(app)
           .patch('/api/v1/users/ake0@gmail.com/verify')
