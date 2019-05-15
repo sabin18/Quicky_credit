@@ -5,17 +5,9 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
-input[type=text3], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
+label{
+  color:black;
 }
-
 input[type=text4], select, textarea {
   width: 100%;
   padding: 12px;
@@ -25,6 +17,21 @@ input[type=text4], select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+}
+.signup-container{
+background-image: url('../images/login.jpg');
+/* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom:12%;
+  color:black;
+}
+.signup-text{
+  color:black;
 }
 
 input[type=file] {
@@ -433,6 +440,10 @@ input[type=text] {
   color: white;
 }
 
+
+
+
+
 input[type=text] {
     width: 100%;
     padding: 12px 28px;
@@ -448,6 +459,7 @@ input[type=text] {
 input[type=text]:focus {
     border: 3px solid #655;
 }
+
 
 body {
   font-family: "Lato", sans-serif;
@@ -531,10 +543,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
 input[type=text3], input[type=password] {
   width: 100%;
   padding: 15px;
+  border: 1px solid blue;
+  box-sizing: border-box;
   margin: 5px 0 22px 0;
+  color:black;
   display: inline-block;
-  border: none;
-  background: #f1f1f1;
+  background:white;
 }
 
 /* Add a background color when the inputs get focus */
@@ -593,13 +607,22 @@ button:hover {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #671BFF;
+  background-image: url("../images/login.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom:12%;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
 .modal-text{
-  color:white;
+  color:black;
 }
 /* Style the horizontal ruler */
 hr {

@@ -2,48 +2,39 @@
 <html lang="en">
 <head>
 <title>Quick_credit</title>
-<link rel="stylesheet" type="text/css" href="css/poli.css">
+<link rel="stylesheet" type="text/css" href="css/admin.css">
 <script src="js/javascriptfunction.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 <body>
-<div class="main" id="main">
-<div class="content" >
-  <!-- menu -->
-<div class="topnav" id="myTopnav">
-  <div class="menu" id="main">
-  <i><h2><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>Open menu</h2></i>
-  </a>
-  <i class="menu-title"><b><h2>Welcome to Quick credit</h2></b></i>
-<div class="menu-right">
-  <i><input type="button" value="logout" class="button" onclick="window.location.href='index.html'"/>
-</div>
+<div class="main">
+<div class="content">
+<!-- menu -->
+<div class="topnav">
+  <i><b><h2>Welcome to Quick credit</h2></b></i>
+  <div class="topnav-right">
+    <i><input type="button" value="logout" class="button" onclick="window.location.href='index.html'"/></i>
   </div>
-</nav>
-    <section>
-</head>
-<body>
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="circle1">
-  <h2>Profile</h2>
-  <h6>Name:kanamugire aristide</h6>
+
+</div>
+  <!--end of menu  -->
+  </head><br>
+<section>
+  <div class="sidenav">  
+<div class="circle1">
+<h2>Profile</h2>
+<h6>Name:kanamugire aristide</h6>
 <img src="images/arist.jpg"  class="circle">
+</div><br>
+<a href="admin_panel.html">admin home</a></br>
+   <a href="view_application.html">loan applications</a></br>
+    <a href="view_notrepaid.html">not fully repaid loans</a></br>
+    <a href="view_repaidloan.html">repaid loans</a></br>
+    <a href="view_user.html">view users</a></br>
+    <a href="resetpassword.html">Reset password</a></br>
+    <a href="index.html">Logout</a></br>
+
 </div>
-  <a href="admin_panel.html">admin home</a>
-   <a href="view_application.html">loan applications</a>
-    <a href="view_notrepaid.html">not fully repaid loans</a>
-    <a href="view_repaidloan.html">repaid loans</a>
-    <a href="view_user.html">view users</a>
-    <a href="resetpassword.html">Reset password</a>
-    <a href="index.html">Logout</a>
-</div>
-<div id="main">
-  <br>
-  <br>
-  <br>
-  <br>
 <input type="text" id="myInput" onkeyup="searchuser()" placeholder="Search for loan application.." title="Type in a name">
 <table id="myTable" >
   <tr ><th colspan="12"><h2 class="table-header">ALL LOAN APPLICATIONS<h2></th></tr>
@@ -131,6 +122,7 @@ var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
   modal.style.display = "block";
 }
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -144,9 +136,9 @@ window.onclick = function(event) {
 </script>
 <div id="id01" class="modal5">
   <span onclick="document.getElementById('id01').style.display='none'" class="close5" title="Close Modal">&times;</span>
-  <form class="modal-content5" action="/action_page.php">
+  <form class="modal-content5" >
     <div class="container5">
-      <h1>Reasons to reject the loan application</h1>
+      <h1 class="modal5-text">Reasons to reject the loan application</h1>
       <hr>
       <label for="fname"><b>user email:</b></label>
       <input type="text5" placeholder="Party name" value="keke@gmail.com" name="fname" required>
@@ -160,11 +152,12 @@ window.onclick = function(event) {
 </div>
 </div>
 </div>
-</div>
 <br>
 </section>
 <footer>
    <p>copyright 2019 Design by izere roger sabin</p>
 </footer>
+</div>
+</div>
 </body>
 </html>
