@@ -1,5 +1,8 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
+bug-fix-home-page-165998
+import jwt from 'jwt-simple';
+ gh-pages
 import app from '../src/server';
 import authentication from '../helpers/authentication';
 
@@ -161,7 +164,10 @@ describe('loans routes test', () => {
 
     };
 
+ bug-fix-home-page-165998180
 
+
+ gh-pages
     chai.request(app)
       .post('/api/v1/loans')
       .send(loans)
@@ -175,7 +181,9 @@ describe('loans routes test', () => {
       });
   });
 
+bug-fix-home-page-165998180
 
+ gh-pages
    it('it should not be able to send a loan application without valid Token ', (done) => {
     const loans = {
       id: 5,
@@ -223,7 +231,9 @@ describe('loans routes test', () => {
 
     };
 
+bug-fix-home-page-165998180
 
+gh-pages
     chai.request(app)
       .post('/api/v1/loans')
       .send(loans)
