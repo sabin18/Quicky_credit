@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Quick credit</title>
+<title>Quick_credit</title>
 <link rel="stylesheet" type="text/css" href="css/user.css">
 <script src="js/javascriptfunction.js"></script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 <body>
 <div class="main">
 <div class="content">
 <!-- menu -->
-  <div class="menu">
-  <i><h4>welcome:kanamugire aristide</h4></i>
+<div class="topnav">
+  <i><b><h2>Welcome to Quick credit</h2></b></i>
+  <div class="topnav-right">
+    <i><input type="button" value="logout" class="button" onclick="window.location.href='index.html'"/></i>
   </div>
+</div>
   <!--end of menu  -->
+  </head><br>
 <section>
   <div class="sidenav">  
 <div class="circle1">
@@ -29,20 +32,19 @@
     <a href="index.html">Logout</a><br>
 </div>
 <div class="main2">
-  <i align="center"><h2>USER PANEL</h2></i>
-  <h2>ALL LOAN REPAYMENTS</h2>
 <input type="text" id="myInput" onkeyup="searchdate()" placeholder="Search payment by date.." title="Type in a name">
 <table id="myTable">
-  <tr class="header">
-    <th style="width:40%;">Date</th>
-    <th style="width:40%;">User</th>
-    <th style="width:40%;">Status</th>
-    <th style="width:40%;">Repaid</th>
-    <th style="width:40%;">Tenor</th>
-    <th style="width:40%;">Amount($)</th>
-    <th style="width:40%;">Payment($)</th>
-    <th style="width:40%;">interest($)</th>
-    <th style="width:40%;">Balance($)</th>
+  <tr ><th colspan="9"><h2 class="table-header">ALL YOUR LOAN REPAYMENTS<h2></th></tr>
+  <tr>
+    <th>Date</th>
+    <th>User</th>
+    <th>Status</th>
+    <th>Repaid</th>
+    <th>Tenor</th>
+    <th>Amount($)</th>
+    <th>Payment($)</th>
+    <th>Interest($)</th>
+    <th>Balance($)</th>
   </tr>
   <tr>
     <td><h4>12/04/2018</h4></td>
@@ -79,12 +81,13 @@
   </tr>
 </table>
 </div>
-</div>
-</div>
+
 <br>
 </section>
 <footer>
   <p>Design by izere roger sabin</p>
 </footer>
+</div>
+</div>
 </body>
 </html>
