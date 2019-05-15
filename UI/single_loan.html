@@ -10,12 +10,12 @@
 <body>
 <div class="main" id="main">
 <div class="content" >
-<!-- menu -->
+  <!-- menu -->
 <div class="topnav" id="myTopnav">
   <div class="menu" id="main">
   <i><h2><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>Open menu</h2></i>
-  <i class="menu-title"><b><h2>Welcome to Quick credit</h2></b></i>
   </a>
+  <i class="menu-title"><b><h2>Welcome to Quick credit</h2></b></i>
 <div class="menu-right">
   <i><input type="button" value="logout" class="button" onclick="window.location.href='index.html'"/>
 </div>
@@ -39,72 +39,106 @@
     <a href="resetpassword.html">Reset password</a>
     <a href="index.html">Logout</a>
 </div>
+
 <div id="main">
   <br>
   <br>
   <br>
   <br>
-<input type="text" id="myInput" onkeyup="searchuser()" placeholder="Search for a user.." title="Type in a name">
-<table id="myTable">
-  <tr ><th colspan="6"><h2 class="table-header">All users<h2></th></tr>
-  <tr class="header">
-    <th>N</th>
-    <th>Name of user</th>
-    <th>image</th>
-    <th>contact</th>
-    <th>verify user</th>
-    <th>Delete</th>
+<table id="myTable" >
+  <tr ><th colspan="2"><h2 class="table-header"> LOAN DETAILS<h2></th></tr>
+  <tr>
+    <th>Details</th>
+    <th>data</th>
+    
   </tr>
   <tr>
-    <td><h4>1</h4></td>
-    <td><h4>eric rutanga</h4></td>
-    <td><img src="images/arist.jpg"width="80" height="80" border="1"></td>
-    <td>0784536727</td>
-    <td><button class="button1" id="myverify">verify</button></td>
-    <td><button class="button2">Delete</button></td>
+    <td><h4>Date</h4></td>
+    <td><b>12/04/2019<b></td>
   </tr>
   <tr>
-    <td><h4>1</h4></td>
-    <td><h4>alex kinsek</h4></td>
-    <td><img src="images/arist.jpg" width="80" height="80" border="1"></td>
-    <td>0784536727</td>
-    <td><button class="button1" id="myverify">verify</button></td>
-    <td><button class="button2">Delete</button></td>
+    <td><h4>Username</h4></td>
+    <td><b>Jhon peter<b></td>
+    
   </tr>
   <tr>
-    <td><h4>3</h4></td>
-    <td><h4>Peter paul</h4></td>
-    <td><img src="images/arist.jpg" width="80" height="80" border="1"></td>
-    <td>0784536727</td>
-    <td><button class="button1" id="myverify">verify</button></td>
-    <td><button class="button2">Delete</button></td>
+    <td><h4>Phone</h4></td>
+    <td><b>078854667377<b></td>
+  </tr>
+  <tr>
+    <td><h4>Email</h4></td>
+    <td><b>zeke@gmail.com<b></td>
+    
+  </tr>
+  <tr>
+    <td><h4>status</h4></td>
+    <td><b>pending<b></td>
+  </tr>
+  <tr>
+    <td><h4>Repaid</h4></td>
+    <td><b>false<b></td>
+    
+  </tr>
+  <tr>
+    <td><h4>Tenor</h4></td>
+    <td><b>10<b></td>
+  </tr>
+  <tr>
+    <td><h4>amount</h4></td>
+    <td><b>200000<b></td>
+    
+  </tr>
+   <tr>
+    <td><h4>payment</h4></td>
+    <td><b>500<b></td>
+    
+  </tr>
+   <tr>
+    <td><h4>Interest</h4></td>
+    <td><b>200000<b></td>
+    
+  </tr>
+   <tr>
+    <td><h4>balance</h4></td>
+    <td><b>200500<b></td>
+    
+  </tr>
+  <tr>
+    <td><button class="button1" id="myBtn">Approve</button></td>
+    <td><button onclick="document.getElementById('id01').style.display='block'"class="button2">Reject</button></td>
+    
   </tr>
 </table>
 <!-- The Modal -->
 <div id="myModal" class="modal">
+
   <!-- Modal content -->
   <div class="modal-content">
     <div class="modal-header">
       <span class="close">&times;</span>
       </div>
     <div class="modal-body">
-      <p><h6>Are you sure you want to verify this user?<h6></p>
+      <p><h5>Are you sure you want approve this loan?<h5></p>
       <p><button type="submit"  class="button1">Yes</button> <button type="submit"  class="button3" class="close">NO</button></p>
     </div>
-    <div class="modal-footer">  
+    <div class="modal-footer">
+      
     </div>
   </div>
+
+</div>
 <script >
 // Get the modal
 var modal = document.getElementById('myModal');
 // Get the button that opens the modal
-var btn = document.getElementById("myverify");
+var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
 }
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -116,6 +150,21 @@ window.onclick = function(event) {
   }
 }
 </script>
+<div id="id01" class="modal5">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close5" title="Close Modal">&times;</span>
+  <form class="modal-content5" >
+    <div class="container5">
+      <h1 class="modal5-text">Reasons to reject the loan application</h1>
+      <hr>
+      <label for="fname"><b>user email:</b></label>
+      <input type="text5" placeholder="Party name" value="keke@gmail.com" name="fname" required>
+      <label for="subject"><b>Write the reason to reject loan application:</b></label>
+      <textarea id="subject" name="subject" placeholder="Write reasons here.." style="height:200px"></textarea>
+      <div class="clearfix5">
+        <button type="submit"  class="button1">Send</button>
+      </div>
+    </div>
+  </form>
 </div>
 </div>
 </div>
