@@ -84,7 +84,7 @@ if you want to access the app as admin
 use this to login:
 
 -Email:mugabe@gmail.com
--password:sha1$db1129e7$1$14d8764a1910de685c04cefc47bd265667780921
+-password:arsenal
 ```
 ## OTHER TOOLS USED IN THIS PROJECT
 
