@@ -116,9 +116,9 @@ Quick Credit is an online lending platform that provides short term soft loans t
             
 ## loans Collection [/api/v1/accounts]
 
-### admin view all loans [POST]
+### admin view all loans [GET]
 
-**Endpoint** `POST /api/v1/loans`
+**Endpoint** `GET/api/v1/loans`
 
 **Description** Through this endpoint,a user can apply for a loan .But before applyinng, you should first make login with valid credentials and be verified to get acces to to send loan appplication. It takes a JSON
                     object containing the status of your account which should be either unverified or verified .
