@@ -1,3 +1,4 @@
+
 * {
   box-sizing:border-box;
 }
@@ -97,6 +98,7 @@ text-align: center;
 
 }
 .login-container {
+  height:100%;
   padding-top:25px;
   padding: 20px;
   width: 70%;
@@ -210,7 +212,7 @@ input[type=submit]:hover {
 
 
 .container1 {
-  background-image: url("../images/loanimages1.jpg");
+  background-image: url("../images/dark.jpg");
 
   /* Full height */
   height: 100%;
@@ -223,7 +225,7 @@ input[type=submit]:hover {
   padding: 64px;
 }
 .container2 {
-background-image: url("../images/images.jpg");
+background-image: url("../images/dark2.jpg");
 
   /* Full height */
   height: 100%;
@@ -288,6 +290,7 @@ footer {
   color: white;
   bottom: 0;
   font-size:20px;
+  flex-shrink: 0;
 }
 img {
   display: block;
@@ -527,6 +530,9 @@ input[type=text] {
   background-color: skyblue;
   color: white;
 }
+
+
+
 input[type=text] {
     width: 100%;
     padding: 12px 28px;
@@ -796,7 +802,7 @@ img.avatar {
 }
 
 span.psw {
-  float: right;
+  
   padding-top: 16px;
 }
 
@@ -865,8 +871,13 @@ span.psw {
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+ body {
+  height: 100%;
+  margin: 0;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 /* Style the header */
@@ -901,7 +912,10 @@ header {
     width: 100%;
     text-align: center;
   }
-  
+  img {
+    margin: auto;
+  }
+
 .home {
 
   padding: 30px;
@@ -922,11 +936,6 @@ header {
 
 }
 
-body {
-
-  font-family: Arial, Helvetica, sans-serif;
-
-}
 
 /* Create two columns/boxes that floats next to each other */
 

@@ -8,17 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <body>
 <div class="main">
-<div class="content">
-<!-- menu -->
-<div class="topnav">
-  <i><b><h2>Welcome to Quick credit</h2></b></i>
-  <div class="topnav-right">
-    <i><input type="button" value="logout" class="button" onclick="window.location.href='index.html'"/></i>
-  </div>
-</div>
-  <!--end of menu  -->
-  </head><br>
-<section>
   <div class="sidenav">  
 <div class="circle1">
 <h2>Profile</h2>
@@ -33,65 +22,80 @@
     <a href="resetpassword.html">Reset password</a></br>
     <a href="index.html">Logout</a></br>
 </div>
+<div class="content">
+<!-- menu -->
+<div class="topnav">
+  <i><b><h2>Welcome to Quick credit</h2></b></i>
+  <div class="topnav-right">
+    <i><input type="button" value="logout" class="button" onclick="window.location.href='index.html'"/></i>
+  </div>
+</div>
+  <!--end of menu  -->
+  </head><br>
+<section>
 <div class="main2">
-<input type="text" id="myInput" onkeyup="searchuser()" placeholder="Search for loan application.." title="Type in a name">
 <table id="myTable" >
-  <tr ><th colspan="12"><h2 class="table-header">ALL LOAN APPLICATIONS<h2></th></tr>
+  <tr ><th colspan="2"><h2 class="table-header"> LOAN DETAILS<h2></th></tr>
   <tr>
-    <th>Date</th>
-    <th>User</th>
-    <th>Status</th>
-    <th>Repaid</th>
-    <th>Tenor</th>
-    <th>Amount($)</th>
-    <th>Payment($)</th>
-    <th>interest($)</th>
-    <th>Balance($)</th>
-    <th>Vew details</th>
-    <th>Approve</th>
-    <th>Reject</th>
+    <th>Details</th>
+    <th>data</th>
+    
   </tr>
   <tr>
-    <td><h4>13/05/2019</h4></td>
-    <td><b>geke@gmail.com<b></td>
-    <td><b>pending<b></td>
-    <td><h4>False</h4></td>
-    <td><b>6<b></td>
-    <td><b>5000<b></td>
-    <td><b>4056<b></td>
-    <td><b>6400<b></td>
-    <td><b>5044<b></td>
-    <td><input type="button" value="view" class="button1" onclick="window.location.href='single_loan.html'"/></td>
-    <td><button class="button1" id="myBtn">Approve</button></td>
-    <td><button onclick="document.getElementById('id01').style.display='block'"class="button2">Reject</button></td>
+    <td><h4>Date</h4></td>
+    <td><b>12/04/2019<b></td>
   </tr>
   <tr>
-    <td><h4>13/05/2019</h4></td>
-    <td><b>duke@gmail.com<b></td>
-    <td><b>pending<b></td>
-    <td><h4>False</h4></td>
-    <td><b>6<b></td>
-    <td><b>5000<b></td>
-    <td><b>4056<b></td>
-    <td><b>6400<b></td>
-    <td><b>5044<b></td>
-    <td><input type="button" value="view" class="button1" onclick="window.location.href='single_loan.html'"/></td>
-    <td><button class="button1" id="myBtn">Approve</button></td>
-    <td><button onclick="document.getElementById('id01').style.display='block'"class="button2">Reject</button></td>
+    <td><h4>Username</h4></td>
+    <td><b>Jhon peter<b></td>
+    
   </tr>
   <tr>
-    <td><h4>13/05/2019</h4></td>
+    <td><h4>Phone</h4></td>
+    <td><b>078854667377<b></td>
+  </tr>
+  <tr>
+    <td><h4>Email</h4></td>
     <td><b>zeke@gmail.com<b></td>
+    
+  </tr>
+  <tr>
+    <td><h4>status</h4></td>
     <td><b>pending<b></td>
-    <td><h4>False</h4></td>
-    <td><b>6<b></td>
-    <td><b>5000<b></td>
-    <td><b>4056<b></td>
-    <td><b>6400<b></td>
-    <td><b>5044<b></td>
-    <td><input type="button" value="view" class="button1" onclick="window.location.href='single_loan.html'"/></td>
+  </tr>
+  <tr>
+    <td><h4>Repaid</h4></td>
+    <td><b>false<b></td>
+    
+  </tr>
+  <tr>
+    <td><h4>Tenor</h4></td>
+    <td><b>10<b></td>
+  </tr>
+  <tr>
+    <td><h4>amount</h4></td>
+    <td><b>200000<b></td>
+    
+  </tr>
+   <tr>
+    <td><h4>payment</h4></td>
+    <td><b>500<b></td>
+    
+  </tr>
+   <tr>
+    <td><h4>Interest</h4></td>
+    <td><b>200000<b></td>
+    
+  </tr>
+   <tr>
+    <td><h4>balance</h4></td>
+    <td><b>200500<b></td>
+    
+  </tr>
+  <tr>
     <td><button class="button1" id="myBtn">Approve</button></td>
     <td><button onclick="document.getElementById('id01').style.display='block'"class="button2">Reject</button></td>
+    
   </tr>
 </table>
 <!-- The Modal -->
@@ -152,13 +156,10 @@ window.onclick = function(event) {
   </form>
 </div>
 </div>
-</div>
 <br>
 </section>
 <footer>
-  <p>Design by izere roger sabin</p>
+   <p>copyright 2019 Design by izere roger sabin</p>
 </footer>
-</div>
-</div>
 </body>
 </html>

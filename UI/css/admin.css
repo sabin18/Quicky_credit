@@ -4,7 +4,6 @@
 .topnav {
   overflow: hidden;
   background-color:blue;
-
 }
 
 .topnav a {
@@ -27,7 +26,15 @@
 .topnav-right {
   float: right;
 }
-
+@media screen and (max-width: 1200px, max-width: 700px,max-width: 600px,max-width: 360px, max-width:320px) {
+  .topnav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .topnav i {float: left;}
+  div.content {margin-left: 0;}
+}
 .button {
   background-color:white; 
   border: 1;
@@ -107,10 +114,90 @@
 
 /* Modal Content/Box */
 .modal-content5 {
-  background-color: #fefefe;
+  background-image: url("../images/login.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom:12%;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from { opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color:blue;
+  color: white;
+  height:30px;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: blue;
+  color: white;
+  height:30px;
 }
 
 /* Style the horizontal ruler */
@@ -173,6 +260,23 @@ input[type=submit]:hover {
 
      width: 100%;
   }
+}
+input[type=text5], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  display: inline-block;
+  border: none;
+  background: white;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text5]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+  
 }
 
 .container {
@@ -255,47 +359,24 @@ img {
 * {
   box-sizing: border-box;
 }
-@media
-only screen and (max-width: 1000px) {
-  table, thead, tbody, td, tr {
-    display: block;
-  }
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-  tr { border: 1px solid #ccc; }
-  td {
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 200px;
-    margin-left: 150px;
-  }
-  td:before {
-    position: absolute;
-    top: 12px;
-    left: 6px;
-    width: 100px;
-    font-size: 20px;
-    padding-right: 40px;
-    white-space: nowrap;
-    margin-left: -150px;
-    background-color:blue; 
-    color:white;
-    border: 2px solid #ddd;
-    font-weight:bold;
-  }
-  td:nth-of-type(1):before { content: "Date"; }
-  td:nth-of-type(2):before { content: "User"; }
-  td:nth-of-type(3):before { content: "Status"; }
-  td:nth-of-type(4):before { content: "Repaid";}
-  td:nth-of-type(5):before { content: "Tenor"; }
-  td:nth-of-type(6):before { content: "Amount"; }
-  td:nth-of-type(7):before { content: "Payment"; }
-  td:nth-of-type(8):before { content: "Interest";}
-  td:nth-of-type(9):before { content: "Balance";}
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
 }
 .table-header{
   text-align: center;
@@ -482,7 +563,36 @@ color: black;}
   color: white;
 }
 
+.button3 {
+  background-color:red; 
+  border: 1;
+  color: black;
+  float: right;
+  padding: 12px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 3px 3px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 6px;
 
+}
+
+.button3:first-child {
+    margin-left: 0;
+}
+
+.button3:last-child {
+    margin-right: 0;
+}
+
+.button3:hover {
+  background-color:red;
+  color: white;
+}
 
 
 body {
@@ -519,7 +629,14 @@ body {
 .sidenav a:hover {
   color: orange;
 }
-@media screen and (max-width: 700px) {
+div.content {
+  width: 100;
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 1200px, max-width: 700px,max-width: 600px,max-width: 360px, max-width:320px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -529,19 +646,20 @@ body {
   div.content {margin-left: 0;}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1200px,max-width: 700px,max-width: 600px,max-width: 360px, max-width:320px) {
   .sidebar a {
     text-align: center;
     float: none;
   }
 }
+
 .main {
-  margin-left:285px; /* Same as 285px;the width of the sidenav */
+  margin-left:70px; /* Same as 285px;the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
 .main2 {
-  margin-left: 55px; /* Same as the width of the sidenav */
+  margin-left: 0px; /* Same as the width of the sidenav */
   font-size: 28px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
@@ -613,10 +731,6 @@ img.avatar {
   width: 10%;
   border-radius: 50%;
   text-align: center;
-}
-
-.container {
-  padding: 16px;
 }
 
 span.psw {
