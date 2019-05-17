@@ -88,7 +88,8 @@ Quick Credit is an online lending platform that provides short term soft loans t
     + Body
 
         {
-            "type":"current"
+            "tenor": "7",
+          "amount": "5500",
         }
 
 + Response 200 (application/json)
@@ -106,8 +107,7 @@ Quick Credit is an online lending platform that provides short term soft loans t
         "email": "benmugabe@gmail.com",
         "status": "pending",
         "repaid": false,
-        "tenor": "7",
-        "amount": "5500",
+        
         "paymentInstallment": 825,
         "balance": 5775,
         "interest": 275
@@ -124,13 +124,6 @@ Quick Credit is an online lending platform that provides short term soft loans t
                     object containing the status of your account which should be either unverified or verified .
 
 + Request (application/json)
-
-    + Body
-
-        {
-        "tenor": "7",
-        "amount": "5500",
-        }
 
 + Response 200 (application/json)
 
