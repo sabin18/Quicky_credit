@@ -5,7 +5,7 @@ HOST:https://quickcredit19.herokuapp.com/
 
 Quick Credit is an online lending platform that provides short term soft loans to individuals. This helps solve problems of financial inclusion as a way to alleviate poverty and empower low income earners. 
 
-## Questions Collection [/questions]
+## how end points works [/questions]
 
 ### User can signup to create an account [/api/v1/auth/signup]
 ### User can signup [POST]
@@ -14,72 +14,143 @@ Quick Credit is an online lending platform that provides short term soft loans t
 
 **Description** You may create your own account using this action.
 
-+ Response 200 (application/json)
-
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "email":"benmugabe@gmail.com",
+            "firstname":"bertrand",
+            "lastnamel":"mugabe",
+            "password":"J2344529",
+            "address":"Nairobi",
+            
         }
 
 + Response 201 (application/json)
 
-    + Headers
+        [
+            {
+                 "message": "user registered successfully",
+        "user": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHBpcmF0aW9uIjoxNTU3OTI2OTI5LCJpYXQiOjE1NTc5MTk3MjksInN1YiI6eyJlbWFpbCI6ImJlbm11Z2FiZUBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJiZXJ0cmFuZCIsImxhc3RuYW1lIjoibXVnYWJlIiwicGFzc3dvcmQiOiIyMzQ0NTIiLCJhZGRyZXNzIjoia2lnYWxpIiwidXNlcklkIjoyLCJzdGF0dXMiOiJ1bnZlcmlmaWVkIiwiaXNhZG1pbiI6ImZhbHNlIn19.oWr1aQ_X-FDzpVQB3Rhq68Laq9C67uGRBuTZzzPKLqM",
+        "id": 2,
+        "firstname": "bertrand",
+        "lastname": "mugabe",
+        "email": "benmugabe@gmail.com"
+           }
+            }
+        ]
 
-            Location: /questions/2
+### User can Login [/api/v1/auth/signin]
+### User can signing [POST]
+
+**Endpoint** `POST /api/v1/auth/signing`
+
+**Description** You can Login using this action.
+
++ Request (application/json)
+
+         {
+            "email":"benmugabe@gmail.com",
+            "password":"J2344529",
+           
+            
+        }
+
++ Response 201 (application/json)
+
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "status": 200,
+                "message": "User login successed!",
+                "data": {
+                    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHBpcmF0aW9uIjoxNTU3OTI2OTI5LCJpYXQiOjE1NTc5MTk3MjksInN1YiI6eyJlbWFpbCI6ImJlbm11Z2FiZUBnbWFpbC5jb20iLCJmaXJzdG5hbWUiOiJiZXJ0cmFuZCIsImxhc3RuYW1lIjoibXVnYWJlIiwicGFzc3dvcmQiOiIyMzQ0NTIiLCJhZGRyZXNzIjoia2lnYWxpIiwidXNlcklkIjoyLCJzdGF0dXMiOiJ1bnZlcmlmaWVkIiwiaXNhZG1pbiI6ImZhbHNlIn19.oWr1aQ_X-FDzpVQB3Rhq68Laq9C67uGRBuTZzzPKLqM",
+                    "firstname": "mugabe",
+                    "lastname": "betrtand",
+                    "email": "benmugabe@gmail.com",
+                    "status": "verified"
+                }
+            }
+            
+            
+## loans Collection [/api/v1/accounts]
+
+### User apply for a loan [POST]
+
+**Endpoint** `POST /api/v1/loans`
+
+**Description** Through this endpoint,a user can apply for a loan .But before applyinng, you should first make login with valid credentials and be verified to get acces to to send loan appplication. It takes a JSON
+                    object containing the status of your account which should be either unverified or verified .
+
++ Request (application/json)
+
+    + Body
+
+        {
+            "type":"current"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "status": 200,
+         "message": "loan created successfully",
+         "loanInfo": {
+        "id": 1,
+        "createdOn": "17-05-2019 03:05:20",
+        "firstname": "mugabe",
+        "lastname": "betrtand",
+        "email": "benmugabe@gmail.com",
+        "status": "pending",
+        "repaid": false,
+        "tenor": "7",
+        "amount": "5500",
+        "paymentInstallment": 825,
+        "balance": 5775,
+        "interest": 275
+                }
+            }
+            
+## loans Collection [/api/v1/accounts]
+
+### admin view all loans [POST]
+
+**Endpoint** `POST /api/v1/loans`
+
+**Description** Through this endpoint,a user can apply for a loan .But before applyinng, you should first make login with valid credentials and be verified to get acces to to send loan appplication. It takes a JSON
+                    object containing the status of your account which should be either unverified or verified .
+
++ Request (application/json)
+
+    + Body
+
+        {
+        "tenor": "7",
+        "amount": "5500",
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "status": 200,
+         "message": "loan created successfully",
+         "loanInfo": {
+        "id": 1,
+        "createdOn": "17-05-2019 03:05:20",
+        "firstname": "mugabe",
+        "lastname": "betrtand",
+        "email": "benmugabe@gmail.com",
+        "status": "pending",
+        "repaid": false,
+        "tenor": "7",
+        "amount": "5500",
+        "paymentInstallment": 825,
+        "balance": 5775,
+        "interest": 275
+                }
             }
