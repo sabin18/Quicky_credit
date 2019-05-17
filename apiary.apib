@@ -147,3 +147,37 @@ Quick Credit is an online lending platform that provides short term soft loans t
         "interest": 275
                 }
             }
+            
+            
+## loans Collection [/api/v1/loans]
+
+### admin view all loans [GET]
+
+**Endpoint** `GET/api/v1/loans/1`
+
+**Description** Through this endpoint,a admin can get one loan .
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "status": 200,
+         "message": "loan created successfully",
+         "loanInfo": {
+        "id": 1,
+        "createdOn": "17-05-2019 03:05:20",
+        "firstname": "mugabe",
+        "lastname": "betrtand",
+        "email": "benmugabe@gmail.com",
+        "status": "pending",
+        "repaid": false,
+        "tenor": "7",
+        "amount": "5500",
+        "paymentInstallment": 825,
+        "balance": 5775,
+        "interest": 275
+                }
+            }
